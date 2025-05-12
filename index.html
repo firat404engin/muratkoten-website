@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murat Köten - Spor Editörü ve Gazeteci</title>
+    <meta name="description" content="Murat Köten - Spor Editörü ve Gazeteci Kişisel Web Sitesi">
+    <meta property="og:title" content="Murat Köten - Spor Editörü ve Gazeteci">
+    <meta property="og:description" content="Spor editörü ve gazeteci için sade, modern, koyu temalı kişisel web sitesi.">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10B981',
+                        secondary: '#3B82F6',
+                        dark: '#101014',
+                        darkgray: '#18181b',
+                    },
+                    animation: {
+                        'gradient-x': 'gradient-x 15s ease infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'gradient-x': {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background: #101014; }
+        .glass-card {
+            background: rgba(24, 24, 27, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #10B981 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-bg {
+            background: linear-gradient(90deg, #10B981 0%, #3B82F6 100%);
+        }
+        .profile-card {
+            background: linear-gradient(145deg, rgba(24, 24, 27, 0.8), rgba(39, 39, 42, 0.4));
+        }
+        .animate-gradient {
+            background: linear-gradient(90deg, #10B981, #3B82F6, #10B981);
+            background-size: 200% 200%;
+            animation: gradient-x 15s ease infinite;
+        }
+        .profile-glow {
+            box-shadow: 0 0 25px 5px rgba(16, 185, 129, 0.2);
+        }
+        .nav-link.active {
+            background: linear-gradient(90deg, #10B981 0%, #3B82F6 100%);
+            color: white;
+        }
+    </style>
+</head>
+<body class="text-white font-sans antialiased">
+    <!-- Navbar Component -->
+    <header id="navbar-component" class="fixed w-full z-50 px-4 py-2">
+        <nav class="glass-card rounded-2xl max-w-7xl mx-auto flex justify-between items-center px-6 py-4 backdrop-blur-lg border border-white/5 shadow-xl">
+            <a href="#hero-section" class="flex items-center gap-3 group">
+                <div class="h-10 w-10 rounded-full gradient-bg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-solid fa-futbol text-white text-lg"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold tracking-tight group-hover:text-primary transition-colors">Murat Köten</span>
+                    <span class="text-xs text-gray-400">Spor Editörü & Gazeteci</span>
+                </div>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-4">
+                <div class="hidden md:flex space-x-1 bg-gray-900/50 rounded-full p-1 backdrop-blur">
+                    <a href="#hero-section" class="nav-link px-5 py-2 rounded-full hover:bg-gray-800/80 transition text-sm font-medium text-gray-300 hover:text-white">Anasayfa</a>
+                    <a href="#about-section" class="nav-link px-5 py-2 rounded-full hover:bg-gray-800/80 transition text-sm font-medium text-gray-300 hover:text-white">Hakkımda</a>
+                    <a href="#content-section" class="nav-link px-5 py-2 rounded-full hover:bg-gray-800/80 transition text-sm font-medium text-gray-300 hover:text-white">Paylaşımlar</a>
+                </div>
+                <a href="#contact-section" class="ml-2 px-5 py-2 rounded-full gradient-bg hover:opacity-90 transition flex items-center gap-2 text-sm font-medium">
+                    <span>İletişim</span>
+                    <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+            
+            <!-- Sosyal Medya Linkleri -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="https://twitter.com/muratkoten" target="_blank" class="w-8 h-8 flex items-center justify-center rounded-full bg-black/30 hover:bg-blue-500/80 transition text-gray-400 hover:text-white">
+                    <i class="fab fa-twitter text-sm"></i>
+                </a>
+                <a href="https://instagram.com/muratkotenn" target="_blank" class="w-8 h-8 flex items-center justify-center rounded-full bg-black/30 hover:bg-gradient-to-br from-purple-500 to-pink-500 transition text-gray-400 hover:text-white">
+                    <i class="fab fa-instagram text-sm"></i>
+                </a>
+                <a href="https://linkedin.com/in/muratkoten" target="_blank" class="w-8 h-8 flex items-center justify-center rounded-full bg-black/30 hover:bg-blue-700 transition text-gray-400 hover:text-white">
+                    <i class="fab fa-linkedin-in text-sm"></i>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="menuBtn" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-black/30 hover:bg-gray-800 transition text-gray-400 hover:text-white">
+                <i class="fa-solid fa-bars text-sm"></i>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden mt-3 mx-4">
+            <div class="glass-card rounded-xl overflow-hidden backdrop-blur-lg border border-white/5 shadow-xl">
+                <div class="p-6">
+                    <div class="flex flex-col space-y-4 mb-6">
+                        <a href="#hero-section" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-800/50 transition">
+                            <div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                <i class="fas fa-home text-sm"></i>
+                            </div>
+                            <span>Anasayfa</span>
+                        </a>
+                        <a href="#about-section" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-800/50 transition">
+                            <div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                <i class="fas fa-user text-sm"></i>
+                            </div>
+                            <span>Hakkımda</span>
+                        </a>
+                        <a href="#content-section" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-800/50 transition">
+                            <div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                <i class="fas fa-video text-sm"></i>
+                            </div>
+                            <span>Paylaşımlar</span>
+                        </a>
+                        <a href="#contact-section" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-800/50 transition">
+                            <div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                <i class="fas fa-envelope text-sm"></i>
+                            </div>
+                            <span>İletişim</span>
+                        </a>
+                    </div>
+                    
+                    <div class="border-t border-gray-800 pt-5">
+                        <p class="text-xs text-gray-400 mb-4">Sosyal Medya Hesaplarım</p>
+                        <div class="flex items-center gap-3">
+                            <a href="https://twitter.com/muratkoten" target="_blank" class="flex-1 py-2 rounded-lg bg-black/30 hover:bg-blue-500/80 transition text-center">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com/muratkotenn" target="_blank" class="flex-1 py-2 rounded-lg bg-black/30 hover:bg-gradient-to-br from-purple-500 to-pink-500 transition text-center">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/muratkoten" target="_blank" class="flex-1 py-2 rounded-lg bg-black/30 hover:bg-blue-700 transition text-center">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Component -->
+    <section id="hero-section" class="min-h-screen pt-32 pb-20 px-6 flex flex-col justify-center items-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.1),transparent_70%)]"></div>
+        
+        <div class="relative z-10 flex flex-col items-center text-center">
+            <div class="mb-8 relative animate-float">
+                <div class="absolute inset-0 rounded-full animate-gradient opacity-30 blur-xl profile-glow"></div>
+                <img src="https://i.hizliresim.com/6jy6d23.jpg" alt="Murat Köten" 
+                     class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-primary z-10 relative profile-glow">
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 gradient-text">Murat Köten</h1>
+            <div class="flex items-center gap-2 text-lg mb-6">
+                <span class="text-gray-300">Spor Editörü</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                <span class="text-gray-300">Gazeteci</span>
+            </div>
+            
+            <p class="max-w-lg text-gray-300 mb-8">
+                Futbol dünyasından güncel haberler, derinlemesine analizler ve özel içeriklerle 
+                spor tutkunlarına profesyonel bakış açısı sunuyorum.
+            </p>
+            
+            <div class="flex gap-4">
+                <a href="#content-section" class="px-6 py-3 rounded-full gradient-bg hover:opacity-90 transition flex items-center gap-2">
+                    <span>İçerikleri Keşfet</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact-section" class="px-6 py-3 rounded-full border border-primary/30 hover:bg-primary/10 transition">
+                    İletişime Geç
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 w-full flex justify-center animate-bounce">
+            <a href="#about-section" class="text-gray-400 hover:text-white">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Hakkımda Component -->
+    <section id="about-section" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text inline-block">Hakkımda</h2>
+                <div class="h-1 w-20 gradient-bg mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="glass-card rounded-3xl p-8 order-2 md:order-1">
+                    <h3 class="text-2xl font-bold mb-4">Spor Editörü & Gazeteci</h3>
+                    <p class="text-gray-300 mb-4">
+                        <strong class="text-primary">Sports Editör @FutbolPlus</strong> olarak, futbol dünyasının 
+                        nabzını tutuyorum. Güncel gelişmeleri anlık olarak takip ediyor, maç öncesi ve sonrası 
+                        analizlerle spor gündemini yakından yorumluyorum.
+                    </p>
+                    <p class="text-gray-300 mb-6">
+                        Futbolun içinden gelen haberlerle, sahadan ekranlara Sportplus farkıyla katkı sağlıyorum.
+                        Sporla ilgili doğru, güvenilir ve detaylı bilgileri izleyicilerle buluşturmak için çalışıyorum.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Futbol Analizi</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Spor Haberciliği</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Canlı Yayın</span>
+                        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Röportaj</span>
+                    </div>
+                </div>
+                
+                <div class="relative order-1 md:order-2 flex justify-center">
+                    <div class="absolute inset-0 rounded-2xl animate-gradient opacity-10 blur-xl"></div>
+                    <a href="https://www.futbolplus.com.tr/" target="_blank" rel="noopener" 
+                       class="relative glass-card rounded-2xl p-6 transform transition-transform hover:scale-105">
+                        <div class="flex flex-col items-center">
+                            <img src="https://yt3.googleusercontent.com/ZCvbJYXNGRnefywRW-lx2aViG_Nm0uUW2bViiop1VMdXI1IBC59fv4J8zGzRn-Jf6cxZJqGfhGM=s900-c-k-c0x00ffffff-no-rj" 
+                                 alt="FutbolPlus" class="w-40 h-40 rounded-xl object-cover mb-4">
+                            <div class="text-center">
+                                <h4 class="text-xl font-bold mb-1">FutbolPlus</h4>
+                                <p class="text-gray-400 text-sm mb-4">Futbol Haberleri & Analizler</p>
+                                <span class="inline-flex items-center gap-1 text-primary">
+                                    <span>Websiteyi Ziyaret Et</span>
+                                    <i class="fas fa-external-link-alt text-xs"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paylaşımlar Component -->
+    <section id="content-section" class="py-20 px-6 bg-darkgray/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text inline-block">İçeriklerim</h2>
+                <div class="h-1 w-20 gradient-bg mx-auto rounded-full"></div>
+                <p class="text-gray-300 max-w-2xl mx-auto mt-4">
+                    En güncel spor analizleri, futbol haberleri ve YouTube içeriklerim
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- YouTube Video Kartı -->
+                <div class="glass-card rounded-3xl overflow-hidden transition-transform hover:scale-[1.02] group relative">
+                    <a href="https://www.youtube.com/watch?v=Ehjvjv1bOEE" target="_blank" rel="noopener" class="block">
+                        <div class="relative">
+                            <img src="https://i.hizliresim.com/7qtby3s.png" alt="Galatasaray'da sıcak gelişmeler!" 
+                                 class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end">
+                                <div class="p-6">
+                                    <div class="flex items-center gap-2 mb-4">
+                                        <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center shadow-lg transform -translate-y-4 group-hover:-translate-y-6 transition-transform duration-300">
+                                            <i class="fab fa-youtube text-white text-xl"></i>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <span class="text-xs font-medium text-red-500">YouTube</span>
+                                            <span class="text-xs font-normal text-gray-400">FutbolPlus</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Galatasaray'da sıcak gelişmeler!</h3>
+                                    <p class="text-gray-300 text-sm mb-3 line-clamp-2">Trabzonspor maçı 11'i! Galatasaray'daki son gelişmeler ve takım hakkında detaylı analizler. Savaş Çorlu & Murat Köten ile birlikte</p>
+                                    
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center text-sm text-gray-400 group-hover:text-primary transition-colors">
+                                            <i class="fas fa-play-circle mr-2"></i>
+                                            <span>İzlemek için tıklayın</span>
+                                        </div>
+                                        <div class="flex items-center space-x-3 text-gray-400 text-xs">
+                                            <span class="flex items-center"><i class="fas fa-eye mr-1"></i> 12.4K</span>
+                                            <span class="flex items-center"><i class="fas fa-thumbs-up mr-1"></i> 831</span>
+                                            <span class="flex items-center"><i class="fas fa-comment mr-1"></i> 37</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="h-1 w-full bg-gray-800 mt-4 overflow-hidden rounded-full">
+                                        <div class="h-full w-3/4 rounded-full gradient-bg animate-pulse"></div>
+                                    </div>
+                                    
+                                    <div class="absolute top-6 right-6 bg-black/70 p-2 rounded-lg text-xs text-white backdrop-blur-sm">
+                                        <i class="fas fa-clock mr-1"></i> 18:24
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- Video öneriler -->
+                    <div class="p-4 bg-gray-900/50 border-t border-gray-800">
+                        <h4 class="font-medium text-sm mb-3">Diğer İçerikler</h4>
+                        <div class="grid grid-cols-3 gap-2">
+                            <a href="https://www.youtube.com/watch?v=mMA_tWpgDaU" target="_blank" class="block group/thumb">
+                                <div class="relative rounded-lg overflow-hidden">
+                                    <img src="https://i.hizliresim.com/g6tq7ck.png" alt="Video" class="aspect-video object-cover w-full transform group-hover/thumb:scale-110 transition duration-300">
+                                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover/thumb:opacity-100 transition-opacity">
+                                        <i class="fas fa-play text-white text-xs"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=p0_slCnSCLE" target="_blank" class="block group/thumb">
+                                <div class="relative rounded-lg overflow-hidden">
+                                    <img src="https://i.hizliresim.com/h69o3gf.png" alt="Video" class="aspect-video object-cover w-full transform group-hover/thumb:scale-110 transition duration-300">
+                                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover/thumb:opacity-100 transition-opacity">
+                                        <i class="fas fa-play text-white text-xs"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=aTAiD4_BR38" target="_blank" class="block group/thumb">
+                                <div class="relative rounded-lg overflow-hidden">
+                                    <img src="https://i.hizliresim.com/n7r3r8c.png" alt="Video" class="aspect-video object-cover w-full transform group-hover/thumb:scale-110 transition duration-300">
+                                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover/thumb:opacity-100 transition-opacity">
+                                        <i class="fas fa-play text-white text-xs"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Instagram Profil Kartı -->
+                <div class="glass-card rounded-3xl overflow-hidden profile-card">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-4">
+                                <a href="https://instagram.com/muratkotenn" target="_blank">
+                                    <img src="https://i.hizliresim.com/6jy6d23.jpg" alt="Murat Köten Instagram" 
+                                         class="w-16 h-16 rounded-full border-2 border-pink-500 object-cover transition hover:scale-110">
+                                </a>
+                                <div>
+                                    <div class="flex items-center gap-1">
+                                        <span class="font-bold">@muratkotenn</span>
+                                        <i class="fa-solid fa-circle-check text-blue-400 text-sm"></i>
+                                    </div>
+                                    <p class="text-gray-400 text-sm">Gazeteci & Spor Editörü</p>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-r from-purple-500 to-pink-500 rounded-full p-1">
+                                <i class="fab fa-instagram text-white text-lg"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-3 gap-2 mb-6">
+                            <div class="rounded-lg bg-white/5 p-3 text-center">
+                                <p class="font-bold">520</p>
+                                <p class="text-xs text-gray-400">Takipçi</p>
+                            </div>
+                            <div class="rounded-lg bg-white/5 p-3 text-center">
+                                <p class="font-bold">414</p>
+                                <p class="text-xs text-gray-400">Gönderi</p>
+                            </div>
+                            <div class="rounded-lg bg-white/5 p-3 text-center">
+                                <p class="font-bold">248</p>
+                                <p class="text-xs text-gray-400">Takip</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 text-sm mb-6">
+                            Murat Köten<br>
+                            Gazeteci<br>
+                            Sports Editor @futbolplus<br>
+                            twitter.com/muratkotenn
+                        </p>
+                        
+                        <a href="https://instagram.com/muratkotenn" target="_blank" 
+                           class="block w-full bg-gradient-to-r from-purple-500 to-pink-500 text-center py-3 rounded-xl font-medium hover:opacity-90 transition">
+                            Instagram'da Takip Et
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Component -->
+    <section id="contact-section" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text inline-block">İletişime Geç</h2>
+                <div class="h-1 w-20 gradient-bg mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="glass-card rounded-3xl p-8 md:p-10">
+                <div class="flex flex-col md:flex-row items-center gap-10">
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold mb-4">Sosyal Medya</h3>
+                        <p class="text-gray-300 mb-6">
+                            Güncel haberler ve içerikler için sosyal medya hesaplarımı takip edebilirsiniz.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <a href="https://twitter.com/muratkoten" target="_blank" class="flex items-center gap-4 p-4 bg-gray-900/70 rounded-xl hover:bg-gray-800/70 transition">
+                                <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center">
+                                    <i class="fab fa-twitter text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Twitter</p>
+                                    <p class="text-sm text-gray-400">@muratkoten</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://instagram.com/muratkotenn" target="_blank" class="flex items-center gap-4 p-4 bg-gray-900/70 rounded-xl hover:bg-gray-800/70 transition">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                                    <i class="fab fa-instagram text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Instagram</p>
+                                    <p class="text-sm text-gray-400">@muratkotenn</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://linkedin.com/in/muratkoten" target="_blank" class="flex items-center gap-4 p-4 bg-gray-900/70 rounded-xl hover:bg-gray-800/70 transition">
+                                <div class="w-10 h-10 rounded-full bg-blue-700 flex items-center justify-center">
+                                    <i class="fab fa-linkedin-in text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">LinkedIn</p>
+                                    <p class="text-sm text-gray-400">muratkoten</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="h-36 w-px bg-gradient-to-b from-transparent via-gray-700 to-transparent hidden md:block"></div>
+                    
+                    <div class="flex-1 text-center">
+                        <div class="w-32 h-32 rounded-full gradient-bg mx-auto mb-6 flex items-center justify-center">
+                            <i class="fas fa-envelope text-4xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">E-posta İletişim</h3>
+                        <p class="text-gray-300 mb-4">İş birliği ve iletişim için e-posta adresim:</p>
+                        <a href="mailto:iletisim@muratkoten.com" class="text-primary font-medium hover:underline">
+                            iletisim@muratkoten.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+<footer id="footer-section" class="bg-gray-900 text-gray-300 py-4 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+
+    <!-- Logo & Name -->
+    <div class="flex items-center gap-3">
+      <div class="h-9 w-9 rounded-full bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center shadow-md">
+        <i class="fa-solid fa-futbol text-white text-base"></i>
+      </div>
+      <span class="text-base font-bold text-white">Murat Köten</span>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-xs text-gray-400 text-center">
+      &copy; 2025 Murat Köten. Tüm Hakları Saklıdır.
+    </div>
+
+    <!-- Designer -->
+    <div class="flex items-center gap-1 text-xs">
+      <span>Design by</span>
+      <a href="https://firatengin-henna.vercel.app/" target="_blank"
+         class="flex items-center gap-1 hover:scale-105 transition-transform duration-300"
+         aria-label="Fırat Engin Web Sitesi">
+        <i class="fas fa-heart text-red-500"></i>
+        <span class="font-semibold text-white">Fırat Engin</span>
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+
+
+    <!-- Component JavaScript'i -->
+    <script>
+        // Component sistemi JavaScript modülü
+        const App = {
+            // Bileşenler
+            components: {
+                navbar: {
+                    el: document.getElementById('navbar-component'),
+                    init: function() {
+                        const menuBtn = document.getElementById('menuBtn');
+                        const mobileMenu = document.getElementById('mobileMenu');
+                        
+                        if (menuBtn && mobileMenu) {
+                            menuBtn.addEventListener('click', () => {
+                                mobileMenu.classList.toggle('hidden');
+                            });
+                        }
+                    }
+                },
+                
+                navigation: {
+                    init: function() {
+                        // Smooth scrolling
+                        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                            anchor.addEventListener('click', function (e) {
+                                e.preventDefault();
+                                const target = document.querySelector(this.getAttribute('href'));
+                                if (target) {
+                                    window.scrollTo({
+                                        top: target.offsetTop - 80,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                                // Mobil menüyü kapat
+                                const mobileMenu = document.getElementById('mobileMenu');
+                                if (mobileMenu) {
+                                    mobileMenu.classList.add('hidden');
+                                }
+                            });
+                        });
+                    }
+                },
+                
+                activeNav: {
+                    sections: ['hero-section', 'about-section', 'content-section', 'contact-section'],
+                    init: function() {
+                        // Aktif bölüm takibi
+                        window.addEventListener('scroll', () => {
+                            const scrollY = window.scrollY;
+                            
+                            this.sections.forEach(id => {
+                                const section = document.getElementById(id);
+                                if (!section) return;
+                                
+                                const sectionTop = section.offsetTop - 100;
+                                const sectionBottom = sectionTop + section.offsetHeight;
+                                
+                                if (scrollY >= sectionTop && scrollY < sectionBottom) {
+                                    document.querySelectorAll('a[href="#' + id + '"]').forEach(link => {
+                                        link.classList.add('bg-gray-800/50');
+                                    });
+                                } else {
+                                    document.querySelectorAll('a[href="#' + id + '"]').forEach(link => {
+                                        link.classList.remove('bg-gray-800/50');
+                                    });
+                                }
+                            });
+                        });
+                    }
+                },
+                
+                animations: {
+                    init: function() {
+                        // Sayfa yüklendiğinde animasyon efektleri
+                        const animateElements = document.querySelectorAll('.animate-on-scroll');
+                        
+                        if (animateElements.length > 0) {
+                            const observer = new IntersectionObserver((entries) => {
+                                entries.forEach(entry => {
+                                    if (entry.isIntersecting) {
+                                        entry.target.classList.add('animate');
+                                    }
+                                });
+                            }, { threshold: 0.1 });
+                            
+                            animateElements.forEach(el => {
+                                observer.observe(el);
+                            });
+                        }
+                    }
+                }
+            },
+            
+            // Uygulamayı başlat
+            init: function() {
+                // Tüm componentleri başlat
+                Object.values(this.components).forEach(component => {
+                    if (typeof component.init === 'function') {
+                        component.init();
+                    }
+                });
+                
+                console.log('Uygulama başlatıldı');
+            }
+        };
+        
+        // Sayfa yüklendiğinde uygulamayı başlat
+        document.addEventListener('DOMContentLoaded', () => {
+            App.init();
+        });
+    </script>
+</body>
+</html> 

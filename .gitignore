@@ -1,0 +1,37 @@
+# macOS dosya sistemi dosyaları
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+package-lock.json
+
+# IDE ve Editör dosyaları
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Derleme çıktıları
+dist/
+build/
+.tmp/
+out/
+.next/
+
+# Diğer
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local 
